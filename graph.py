@@ -4,7 +4,9 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 plt.rc('font', family = 'Malgun Gothic')
-PATH = r'F:\06_데이터\dacon_전력\mrc\dacon_elec\png'
+
+# PATH를 수정하여 사용할 것
+PATH = './png'
 
 
 def dayCounsumption(df: pd.DataFrame, x):
