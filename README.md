@@ -101,15 +101,16 @@ data set
 ### 3.1 건물유형별 모델 <a name="sec3p1"></a>
 건물유형별로 모델의 최적 Parameter를 찾고 test 데이터 예측값을 출력하였습니다
 - 건물유형별 최적 Parameter
-
+  ![건물유형별_param](https://github.com/DTDisScience/project/assets/131218231/66ebd602-1976-44f5-b11d-eb69c7f972e7)
 
 ### 3.2 건물별 모델 <a name="sec3p2"></a>
 건물별로 모델의 최적 Parameter를 찾고 test 데이터 예측값을 출력하였습니다
 - 건물별 최적 Parameter
+  ![건물별_param](https://github.com/DTDisScience/project/assets/131218231/ce74daf4-bb47-4c13-9698-7f7b8c8ce9ac)
 
 
 ## 4. 결론 <a name="section4"></a>
-전체 1233 팀 중 136위 (상위 약 11%)
+- 전체 1233 팀 중 136위 (상위 약 11%)
 ![순위](https://github.com/DTDisScience/project/assets/131218231/775b67ab-3a6b-4932-b1d8-3863cfe88cbd)
 
 1. EDA의 중요성
@@ -118,8 +119,9 @@ data set
      train 데이터를 통해 실제로 월 2회 전력사용량이 급감하는 것을 확인할 수 있었습니다.<br/> 
      다만, 2022년 8월의 경우 광복절 대체휴무일로 인하여 test 데이터 중 1일 휴무 여부를 확인할 수 없었습니다.
 2. 종속변수의 분포 확인
-   - 다른 분들의 코드를 통해, 종속변수인 전력소비량이 좌측편포를 보임을 알 수 있었습니다.<br/> 
-     종속변수의 로그변환을 통해 정규분포와 가까운 형태로 변환하여 보다 나은 예측결과를 도출할 수 있을 것으로 예상합니다.
+   - 다른 참여자들의 코드를 통해, 종속변수인 전력소비량이 좌측편포를 보임을 알 수 있었습니다.<br/> 
+     종속변수의 로그변환을 통해 정규분포와 가까운 형태로 변환하여<br/>
+     보다 나은 예측결과를 도출할 수 있을 것으로 예상합니다.
 3. 최적 Parameter 관련
    - SMAPE 점수에 따른 Parameter 선택이 아닌<br/> 
      각 Parameter가 높거나 낮다는 것이 정확히 어떠한 의미를 가지며,<br/> 
