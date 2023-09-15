@@ -13,10 +13,10 @@ from sklearn.model_selection import GridSearchCV
 # =============================================================================
 # 원본 데이터 불러오기
 # =============================================================================
-df_train_원본 = pd.read_csv('train.csv')
-df_building_info_원본 = pd.read_csv('building_info.csv')
-df_test_원본 = pd.read_csv('test.csv')
-submission = pd.read_csv('sample_submission.csv')
+df_train_원본 = pd.read_csv('csv/train.csv')
+df_building_info_원본 = pd.read_csv('csv/building_info.csv')
+df_test_원본 = pd.read_csv('csv/test.csv')
+submission = pd.read_csv('csv/sample_submission.csv')
 
 # step 1) num_date_time, 일조(hr), 일사(MJ/m2) 컬럼 드랍
 df_train_원본 = df_train_원본.drop(['num_date_time', '일조(hr)', '일사(MJ/m2)'], axis=1)
