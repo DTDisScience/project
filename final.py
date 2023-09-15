@@ -344,5 +344,5 @@ answer = answer.reset_index(drop=True)
 submission['answer'] = answer
 
 submission.to_csv('submit_ver2.csv', index=False)
-len(train_x.columns)
+
 
