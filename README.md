@@ -2,6 +2,7 @@
 
 Git-hub repository:
 https://github.com/DTDisScience/project.git
+
 직전 대회 우승팀인 j_sean 팀의 코드를 참고하여 진행하였습니다.
 
 data set
@@ -61,7 +62,8 @@ data set
 1. 불필요 컬럼 제거 및 결측치 확인 및 처리
 2. 건물유형별 일별 전력소비량 패턴 시각
  - 건물유형별 일별 평균 전력소비량을 보면 다음과 같은 패턴을 보여줍니다.
-![10Mean Power Consumption by Day and Building Type](https://github.com/DTDisScience/project/assets/131218231/35b1f107-acc6-4440-bc5f-24206917455d)
+![12Mean Power Consumption by Day and Building Type](https://github.com/DTDisScience/project/assets/131218231/b9ecb621-2c0f-45b6-a0c5-bbc34bf474a9)
+
 
 
 
