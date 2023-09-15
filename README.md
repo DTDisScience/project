@@ -15,14 +15,14 @@ data set
 1. [프로젝트 개요](#project outline)
 
 2. [데이터 전처리](#section2)
-   1. 데이터셋 설명(#sec2p1)
-   2. EDA(#sec2p2)
-   3. 독립변수 추가(#sec2p3)
-   4. 평가지표 SMAPE(#sec2p4)
+   1. [데이터셋 설명](#sec2p1)
+   2. [EDA](#sec2p2)
+   3. [독립변수 추가](#sec2p3)
+   4. [평가지표 SMAPE](#sec2p4)
 
 4. [모델 생성](#section3)
-   1. 건물유형별 모델(#sec3p1)
-   2. 개별 건물별 모델(#sec3p2)
+   1. [건물유형별 모델](#sec3p1)
+   2. [개별 건물별 모델](#sec3p2)
 
 5. [결론](#conclusion)
 
