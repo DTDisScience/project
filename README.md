@@ -28,7 +28,7 @@ data set
 5. [결론](#section4)
 
 
-## 1. 프로젝트 개요 <a name="project outline"></a>
+## 1. 프로젝트 개요 <a name="section1"></a>
  - 안정적이고 효율적인 에너지 공급을 위하여 전력 사용량 예측 시뮬레이션을 통한 효율적인 인공지능 알고리즘 발굴을 목표로 한국에너지공단에서 개최한 대회 참여
  - 관련기사
    - 필요 전력량 급증하자 꺼낸 '새 원전 건설'...상황은 첩첩산중
@@ -43,24 +43,24 @@ data set
 
 ## 2. 데이터 전처리 <a name="section2"></a>
 ### 2.1 데이터셋 설명 <a name="sec2p1"></a>
-1. Train data
+1) Train data
    - 독립변수
      - 건물별 기상 Data (건물별 2040개, 총 204000개 data)
      - 측정기준: 2022년 6월 1일 00시 ~ 2022년 8월 24일 23시 (1시간 단위)
      - 변수: 건물번호, 일시, 기온, 강수량, 풍속, 습도, 일조, 일사, 전력소비량
    - 종속변수
      - 건물별 1시간 단위 전력사용량
-2. Test data
+2) Test data
    - 독립변수
      - 건물별 기상 Data (건물별 168개, 총 16800개 data)
      - 측정기준: 2022년 8월 25일 00시 ~ 2022년 8월 31일 23시 (1시간 단위)
      - 변수: 건물번호, 일시, 기온, 강수량, 풍속, 습도, 일조, 일사, 전력소비량
-3. Building_info
+3) Building_info
    - 변수 : 건물번호, 건물유형, 연면적, 냉방면적, 태양광용량, ESS저장용량, PCS용량
 
 ### 2.2 EDA <a name="sec2p2"></a>
-1. 불필요 컬럼 제거 및 결측치 확인 및 처리
-2. 건물유형별 일별 전력소비량 패턴 시각화
+1) 불필요 컬럼 제거 및 결측치 확인 및 처리
+2) 건물유형별 일별 전력소비량 패턴 시각화
  - 건물유형별 일별 평균 전력소비량
 ![12Mean Power Consumption by Day and Building Type](https://github.com/DTDisScience/project/assets/131218231/b9ecb621-2c0f-45b6-a0c5-bbc34bf474a9)
  - 건물유형별 각 건물의 시간대별 전력소비량
@@ -76,6 +76,31 @@ data set
    ![DATA CENTER Mean Power Consumption by Hour](https://github.com/DTDisScience/project/assets/131218231/4c1af1c5-9b8b-43a2-9c3a-34aff5e6356f)
    ![COMMERCIAL Mean Power Consumption by Hour](https://github.com/DTDisScience/project/assets/131218231/a3c2669f-5f3c-4aff-abf3-11191947bc6e)
    ![APARTMENT Mean Power Consumption by Hour](https://github.com/DTDisScience/project/assets/131218231/083cfcff-cecc-441c-bc42-bdac7729bbbd)
+
+건물유형별로 일별 전력소비량이 유사한 패턴을 보임을 확인할 수 있었습니다.
+따라서 우선, 건물유형별로 전력소비량 예측 모델을 만들었습니다.
+
+### 2.3 독립변수 추가 <a name="sec2p3"></a>
+1) 건물유형별, 월별, 시간대별 전력사용량 평균, 표준편차, 최대사용량
+   (단, 모든 건물이 6월 대비 7,8월 전력사용량이 급증하므로 월별로 산출)
+2) 각 건물별, 월별, 요일별, 앞뒤 세시간 평균, 최대 전력사용량
+3) 불쾌지수(TDI)
+4) 온도, 습도 각 시간대별 변화량
+
+### 2.4 평가지표 SMAPE <a name="sec2p4"></a>
+- 대회의 심사기준인 SMAPE(Symmetric Mean Absolute Percentage Error)를 사용
+  ![그림1](https://github.com/DTDisScience/project/assets/131218231/c014a7e5-6cfb-40de-a045-c4a14a529526)
+
+
+## 3. 모델 생성 <a name="section3"></a>
+시계열 도메인에서 주로 사용하는 부스팅 기반 모델인 xgboost 모델 적용
+실제로 시계열 데이터에서 우수한 성능을 보이는 LSTM(Long Short Term Memory) 보다 높은 점수를 기록했습니다.
+시계열 데이터를 회귀 데이터로 변경했기 때문에, 변수가 시계열 특성을 반영할 수 있도록 가공
+
+### 3.1 건물유형별 모델 <a name="sec3p1"></a>
+
+
+
 
 
 
