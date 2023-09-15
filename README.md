@@ -6,10 +6,10 @@ https://github.com/DTDisScience/project.git
 직전 대회 우승팀인 j_sean 팀의 코드를 참고하여 진행하였습니다.
 
 data set
-- Train data : csv\train.csv
-- building info data : csv\building_info.csv
-- test data : csv\teset.csv
-- submission(제출용) : csv\sample_submission.csv
+- Train data: csv\train.csv
+- building info data: csv\building_info.csv
+- test data: csv\teset.csv
+- submission(제출용): csv\sample_submission.csv
 
 
 # Contents
@@ -45,7 +45,7 @@ data set
 ### 2.1 데이터셋 설명 <a name="sec2p1"></a>
 1) Train data
    - 독립변수
-     - 건물별 기상 Data (건물별 2040개, 총 204000개 data)
+     - 건물별 기상 data (건물별 2040개, 총 204000개 data)
      - 측정기준: 2022년 6월 1일 00시 ~ 2022년 8월 24일 23시 (1시간 단위)
      - 변수: 건물번호, 일시, 기온, 강수량, 풍속, 습도, 일조, 일사, 전력소비량
    - 종속변수
