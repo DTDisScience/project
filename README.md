@@ -59,7 +59,7 @@ data set
    - 변수 : 건물번호, 건물유형, 연면적, 냉방면적, 태양광용량, ESS저장용량, PCS용량
 
 ### 2.2 EDA <a name="sec2p2"></a>
-1) 불필요 컬럼 제거 및 결측치 확인 및 처리
+1) 불필요 컬럼 제거, 결측치 확인 및 처리
 2) 건물유형별 일별 전력소비량 패턴 시각화
  - 건물유형별 일별 평균 전력소비량
 ![12Mean Power Consumption by Day and Building Type](https://github.com/DTDisScience/project/assets/131218231/b9ecb621-2c0f-45b6-a0c5-bbc34bf474a9)
